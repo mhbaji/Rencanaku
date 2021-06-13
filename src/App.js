@@ -46,7 +46,7 @@ const PlanAdder = ({plans, setPlans}) =>{
       <label for='waktu' className='label-waktu'>Pada : </label>
       <input 
         className='inp-waktu' id='waktu' type='date'  
-        min='2020-1-31' max='2030-1-31' 
+        min='2020-1-31' max='2030-1-31' value={akan}
         onChange={event => setAkan(event.target.value)} 
         pattern='\d{4} \d{2} \d{Month}'
         />
