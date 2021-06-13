@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Rencanaku/static/css/main.4d70dd4f.chunk.css",
+    "main.js": "/Rencanaku/static/js/main.665dbefc.chunk.js",
+    "main.js.map": "/Rencanaku/static/js/main.665dbefc.chunk.js.map",
+    "runtime-main.js": "/Rencanaku/static/js/runtime-main.180d8dfc.js",
+    "runtime-main.js.map": "/Rencanaku/static/js/runtime-main.180d8dfc.js.map",
+    "static/js/2.5a1232cd.chunk.js": "/Rencanaku/static/js/2.5a1232cd.chunk.js",
+    "static/js/2.5a1232cd.chunk.js.map": "/Rencanaku/static/js/2.5a1232cd.chunk.js.map",
+    "static/js/3.41b02cfe.chunk.js": "/Rencanaku/static/js/3.41b02cfe.chunk.js",
+    "static/js/3.41b02cfe.chunk.js.map": "/Rencanaku/static/js/3.41b02cfe.chunk.js.map",
+    "index.html": "/Rencanaku/index.html",
+    "static/css/main.4d70dd4f.chunk.css.map": "/Rencanaku/static/css/main.4d70dd4f.chunk.css.map",
+    "static/js/2.5a1232cd.chunk.js.LICENSE.txt": "/Rencanaku/static/js/2.5a1232cd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.180d8dfc.js",
+    "static/js/2.5a1232cd.chunk.js",
+    "static/css/main.4d70dd4f.chunk.css",
+    "static/js/main.665dbefc.chunk.js"
+  ]
+}
