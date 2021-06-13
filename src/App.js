@@ -33,17 +33,17 @@ const PlanAdder = ({plans, setPlans}) =>{
     setPlans([...plans, newPlan]);
     setTextValue('');
     setAkan('');
-    console.log(currentTime);
-    console.log('dasar')
-    console.log(dasar);
-    console.log(dasar.getMonth);
+    // console.log(currentTime);
+    // console.log('dasar')
+    // console.log(dasar);
+    // console.log(dasar.getMonth);
   }
   
 
   return <div className='adder'>
-    <textarea className='txt-waktu' value={textValue} type='text' placeholder='Tulis Renacanamu' onChange={event => setTextValue(event.target.value)}/>
+    <textarea className='txt-waktu' value={textValue} type='text' placeholder='Write your plan' onChange={event => setTextValue(event.target.value)}/>
     <div className='waktu'>
-      <label for='waktu' className='label-waktu'>Pada : </label>
+      <label for='waktu' className='label-waktu'>On : </label>
       <input 
         className='inp-waktu' id='waktu' type='date'  
         min='2020-1-31' max='2030-1-31' value={akan}
