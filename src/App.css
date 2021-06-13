@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.edit-text, .edit-btn{
+  display: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +39,65 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.wrapper {
+  width: 60%;
+  margin: 10px auto;
+}
+
+.header-utama{
+  text-align: center;
+}
+
+.header-utama > h1{
+  background-color: yellowgreen;
+}
+
+.adder{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.txt-waktu, .waktu, .btn-waktu{ 
+  display: inline-block;
+  margin: 5px;
+}
+
+.label-waktu, .inp-waktu{
+  display: block;
+  margin: 5px;
+}
+
+.plan{
+  width: 50%;
+  display: inline-block;
+}
+
+.header-plan, .header-do{
+  text-align: center;
+}
+
+.do{
+  width: 50%;
+  /* display: inline-block; */
+  float: right;
+}
+
+.btn-all{
+  margin: 5px;
+}
+
+.list-plan{
+  border-bottom: 1px solid black;
+}
+
+.created-at{
+  font-size: smaller;
+  margin: 1px;
+}
+
+.garis-bawah{
+  border-bottom: 1px solid red;
 }
