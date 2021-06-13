@@ -32,6 +32,7 @@ const PlanAdder = ({plans, setPlans}) =>{
     }
     setPlans([...plans, newPlan]);
     setTextValue('');
+    setAkan('');
     console.log(currentTime);
     console.log('dasar')
     console.log(dasar);
