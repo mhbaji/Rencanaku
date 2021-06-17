@@ -101,3 +101,8 @@
 .garis-bawah{
   border-bottom: 1px solid red;
 }
+
+.edit{
+  display: none;
+  /* background-color: yellowgreen; */
+}

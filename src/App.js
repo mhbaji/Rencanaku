@@ -21,9 +21,9 @@ const PlanAdder = ({plans, setPlans}) =>{
   const currentTime = `${months[current.getMonth()]} ${current.getDate()}, ${current.getFullYear()}`;
   
   const handlerAdd = () =>{
-    const willOn = document.getElementById('waktu').value;
-    const dasar = new Date(willOn);
-    const akanJadi = `${months[dasar.getMonth()]} ${dasar.getDate()}, ${dasar.getFullYear()}`;
+    // const willOn = document.getElementById('waktu').value;
+    const editWaktu = new Date(akan);
+    const akanJadi = `${months[editWaktu.getMonth()]} ${editWaktu.getDate()}, ${editWaktu.getFullYear()}`;
     const newPlan = {
       id: maxIdPlans + 1,
       plan: textValue,
@@ -34,9 +34,9 @@ const PlanAdder = ({plans, setPlans}) =>{
     setTextValue('');
     setAkan('');
     // console.log(currentTime);
-    // console.log('dasar')
-    // console.log(dasar);
-    // console.log(dasar.getMonth);
+    // console.log('editWaktu')
+    // console.log(editWaktu);
+    // console.log(editWaktu.getMonth);
   }
   
 
@@ -72,18 +72,21 @@ const PlanHeader = ({plans}) =>{
 }
 
 const Plan = ({createdAt, willOn,plan, id, plans, setPlans, alreadyDo, setAlreadyDo}) =>{
+  const adderDo = plans.filter(plan => plan.id === id);
+  const [editValue, setEditValue] = useState(adderDo[0].plan)
+  const [editWaktu, setEditWaktu] = useState(adderDo[0].createdAt)
   const maxIdDo = alreadyDo.reduce((tar, cv) => tar = tar>cv.id ? tar : cv.id, 0);
   const current = new Date();
   const currentTime = `${months[current.getMonth()]} ${current.getDate()}, ${current.getFullYear()}`;
-  
+  const indexid = plans.findIndex(plan => plan.id === id);
+  const updated = plans.filter(plan => plan.id !== id);
+
   const handlerDelete = () =>{
-    const updated = plans.filter(plan => plan.id !== id);
     setPlans(updated);
   }
 
   const handlerDone = () =>{
-    console.log('done')
-    const adderDo = plans.filter(plan => plan.id === id);
+    console.log('done')  
     const newDo = {
       id: maxIdDo + 1,
       alreadyDo: adderDo[0].plan,
@@ -93,9 +96,47 @@ const Plan = ({createdAt, willOn,plan, id, plans, setPlans, alreadyDo, setAlread
     handlerDelete();
   }
 
+  const handlerEdit = () =>{
+    const editClass = document.getElementsByClassName('edit')[indexid];
+    editClass.style.display = 'block';
+
+  }
+
+  const handlerOk = () =>{
+    const editClass = document.getElementsByClassName('edit')[indexid];
+    editClass.style.display = 'none';
+    const dasarEdit = new Date(editWaktu);
+    const waktuEdit = `${months[dasarEdit.getMonth()]} ${dasarEdit.getDate()}, ${dasarEdit.getFullYear()}`;
+    
+    const newEdit = {
+      id: id,
+      plan: editValue,
+      createdAt: currentTime,
+      willOn: waktuEdit,
+    }
+    setPlans([...updated, newEdit])
+    // console.log(editWaktu)
+  }
+
   return <div className='list-plan'>
     <p>{plan} <b>on {willOn}</b></p>
     <p className='created-at'>Created At: {createdAt}</p>
+
+    <div className='edit'>
+      <textarea 
+        value={editValue}
+        className='txt-edit' type='text' 
+        onChange={event => setEditValue(event.target.value)} />
+      <label for='edit-waktu'>On : </label>
+      <input 
+        className='edit-waktu' id='edit-waktu' type='date'  
+        min='2020-1-31' max='2030-1-31' value={editWaktu}
+        onChange={event => setEditWaktu(event.target.value)} 
+        pattern='\d{4} \d{2} \d{Month}'
+        />
+      <button disabled={editValue==='' || editWaktu===''} className='btn-all' onClick={() => handlerOk() }>Ok</button>
+    </div>
+    <button className='btn-all' onClick={() => handlerEdit() }>Edit</button>
     <button className='btn-all' onClick={() => handlerDone() }>Done</button>
     <button className='btn-all' onClick={() => handlerDelete()}>Delete</button>
   </div>
