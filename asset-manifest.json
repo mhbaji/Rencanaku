@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Rencanaku/static/css/main.69e3d39f.chunk.css",
-    "main.js": "/Rencanaku/static/js/main.34f20277.chunk.js",
-    "main.js.map": "/Rencanaku/static/js/main.34f20277.chunk.js.map",
+    "main.css": "/Rencanaku/static/css/main.e80fb1dd.chunk.css",
+    "main.js": "/Rencanaku/static/js/main.34301a88.chunk.js",
+    "main.js.map": "/Rencanaku/static/js/main.34301a88.chunk.js.map",
     "runtime-main.js": "/Rencanaku/static/js/runtime-main.180d8dfc.js",
     "runtime-main.js.map": "/Rencanaku/static/js/runtime-main.180d8dfc.js.map",
     "static/js/2.11b1e234.chunk.js": "/Rencanaku/static/js/2.11b1e234.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.41b02cfe.chunk.js": "/Rencanaku/static/js/3.41b02cfe.chunk.js",
     "static/js/3.41b02cfe.chunk.js.map": "/Rencanaku/static/js/3.41b02cfe.chunk.js.map",
     "index.html": "/Rencanaku/index.html",
-    "static/css/main.69e3d39f.chunk.css.map": "/Rencanaku/static/css/main.69e3d39f.chunk.css.map",
+    "static/css/main.e80fb1dd.chunk.css.map": "/Rencanaku/static/css/main.e80fb1dd.chunk.css.map",
     "static/js/2.11b1e234.chunk.js.LICENSE.txt": "/Rencanaku/static/js/2.11b1e234.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.180d8dfc.js",
     "static/js/2.11b1e234.chunk.js",
-    "static/css/main.69e3d39f.chunk.css",
-    "static/js/main.34f20277.chunk.js"
+    "static/css/main.e80fb1dd.chunk.css",
+    "static/js/main.34301a88.chunk.js"
   ]
 }
