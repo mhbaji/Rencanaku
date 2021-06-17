@@ -73,8 +73,8 @@ const PlanHeader = ({plans}) =>{
 
 const Plan = ({createdAt, willOn,plan, id, plans, setPlans, alreadyDo, setAlreadyDo}) =>{
   const adderDo = plans.filter(plan => plan.id === id);
-  const [editValue, setEditValue] = useState(adderDo[0].plan)
-  const [editWaktu, setEditWaktu] = useState(adderDo[0].createdAt)
+  const [editValue, setEditValue] = useState('')
+  const [editWaktu, setEditWaktu] = useState('')
   const maxIdDo = alreadyDo.reduce((tar, cv) => tar = tar>cv.id ? tar : cv.id, 0);
   const current = new Date();
   const currentTime = `${months[current.getMonth()]} ${current.getDate()}, ${current.getFullYear()}`;
@@ -99,7 +99,8 @@ const Plan = ({createdAt, willOn,plan, id, plans, setPlans, alreadyDo, setAlread
   const handlerEdit = () =>{
     const editClass = document.getElementsByClassName('edit')[indexid];
     editClass.style.display = 'block';
-
+    console.log('idx', indexid)
+    console.log('id', id)
   }
 
   const handlerOk = () =>{
@@ -115,6 +116,8 @@ const Plan = ({createdAt, willOn,plan, id, plans, setPlans, alreadyDo, setAlread
       willOn: waktuEdit,
     }
     setPlans([...updated, newEdit])
+    setEditValue('')
+    setEditWaktu('')
     // console.log(editWaktu)
   }
 
