@@ -130,13 +130,15 @@ const Plan = ({createdAt, willOn,plan, id, plans, setPlans, alreadyDo, setAlread
         value={editValue}
         className='txt-edit' type='text' 
         onChange={event => setEditValue(event.target.value)} />
-      <label for='edit-waktu'>On : </label>
-      <input 
-        className='edit-waktu' id='edit-waktu' type='date'  
-        min='2020-1-31' max='2030-1-31' value={editWaktu}
-        onChange={event => setEditWaktu(event.target.value)} 
-        pattern='\d{4} \d{2} \d{Month}'
-        />
+      <div className='label-edit'>
+        <label className='lbl-edit' for='edit-waktu'>On : </label>
+        <input 
+          className='edit-waktu' id='edit-waktu' type='date'  
+          min='2020-1-31' max='2030-1-31' value={editWaktu}
+          onChange={event => setEditWaktu(event.target.value)} 
+          pattern='\d{4} \d{2} \d{Month}'
+          />
+      </div>
       <button disabled={editValue==='' || editWaktu===''} className='btn-all' onClick={() => handlerOk() }>Ok</button>
     </div>
     <button className='btn-all' onClick={() => handlerEdit() }>Edit</button>
